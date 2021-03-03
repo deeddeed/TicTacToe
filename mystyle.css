@@ -17,6 +17,7 @@ input[type="button"] {
   width: 100px;
   height: 100px;
   background-color: white;
+  color: black;
 }
 .grid {
   border: solid 0.2cm black;
