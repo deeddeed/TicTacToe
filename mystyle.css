@@ -1,0 +1,23 @@
+h1 {
+  font-size: large;
+  text-align: center;
+}
+#bigContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+#firstLine,
+#secondLine,
+#thirdLine {
+  display: flex;
+  justify-content: center;
+}
+input[type="button"] {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+.grid {
+  border: solid 0.2cm black;
+}
