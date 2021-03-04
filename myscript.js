@@ -19,19 +19,32 @@ const gameBoard = [
   eighthCube,
   ninthCube,
 ];
+let playerPicks = document.getElementsByClassName("gameBoard");
+let checkPlayerNr;
 
 function playerChoose() {
   let counter = gameBoard.length;
-  let playerPicks = document.getElementsByClassName("gameBoard");
 
   for (let i = 0; i < playerPicks.length; i++) {
     playerPicks[i].addEventListener("click", (event) => {
-       
-        console.log(playerPicks[i].value);
-        playerPicks[i].value = "X";
-        
+      playerPicks[i].classList.add("playerChoose");
+      console.log("Player Choose Nr " + playerPicks[i].value);
+      checkPlayerNr = playerPicks[i].value;
+      playerPicks[i].value = "X";
+      computerChoose();
     });
   }
-
+  console.log("end");
 }
 playerChoose();
+
+function computerChoose() {
+  let randomNum = Math.floor(Math.random() * Math.floor(9));
+  console.log("Computer choose Nr " + randomNum);
+  if (randomNum !== checkPlayerNr) {
+    playerPicks[randomNum].value = "O";
+    playerPicks[randomNum].classList.add("computerChoose");
+  }else{
+    computerChoose();
+  }
+}

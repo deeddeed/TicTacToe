@@ -13,12 +13,20 @@ h1 {
   display: flex;
   justify-content: center;
 }
-input[type="button"] {
+.gameBoard{
   width: 100px;
   height: 100px;
   background-color: white;
-  color: black;
+  color: white;
 }
 .grid {
   border: solid 0.2cm black;
+}
+.playerChoose{
+  background-color: blue;
+  color: white;
+}
+.computerChoose{
+  background-color: red;
+  color: white;
 }
